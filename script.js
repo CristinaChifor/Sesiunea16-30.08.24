@@ -39,19 +39,39 @@ console.log("Cod ce se executa simultan cu promisiunea");
  Functiile asincrone returneaza intotdeauna o promisiune.
  */
 
+/**Cand se utilizeaza await intr-o functie asincrona, aceasta asteapta finalizarea unei promisiuni
+  si returneaza rezultatul acesteia. 
+  In timp ce aSteaptA, controlul este redat apelantului, permiTAnd execuTia altor operaTiuni. 
+ */
+
  async function getUsers() {
-    setTimeout(() => {
-        return [
+    let users = [
             {username: "username1", password: "pass1"},
             {username: "username2", password: "pass2"},
 
         ]
-    }, 3000);
+    return users;
  }
 
  const users = getUsers();
-//  console.log(users);
+console.log(users);
 users.then((users) => {
     console.log(users);
 }).catch((e) => console.log(e));
+
+async function doSomethingWithUsers() {
+    let users = await getUsers();
+    console.log(`Users din await: `, users);
+}
+
+doSomethingWithUsers();
+
+/** try/catch poate fi folosit pentru gestionarea erorilor In funcTiile asincrone, 
+  facand codul mai robust si mai usor de intretinut.
+ */
+
+  
+
+
+
 
