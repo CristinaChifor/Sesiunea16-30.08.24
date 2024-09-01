@@ -70,7 +70,43 @@ doSomethingWithUsers();
   facand codul mai robust si mai usor de intretinut.
  */
 
-  
+  try {
+    const labels = ["label"];
+    // saySomething("abcsd");
+    console.log(`First labels is ${labels[0]}`);
+  } catch (error) {
+    console.log("An error has occured: ", error);
+
+  } finally {
+    console.log("Finally has been executed");
+  }
+
+  console.log("After try/ catch");
+
+  /** API REQUEST - Application Programming Interface
+   
+   * un "request" (cerere) se referA la o solicitare facuta de catre o aplicatie sau script catre un server 
+   pentru a obtine sau a trimite date. In urma unei cereri se obTine un rAspuns (response) cu detalii privind 
+   rezultatul cererii.
+    Există mai multe moduri de a face cereri In JavaScript, iar două dintre cele mai comune metode sunt 
+    folosirea obiectului XMLHttpRequest si a functiei fetch(). 
+    Aceste metode permit dezvoltatorilor sa trimită cereri HTTP catre server specificand 
+    metoda cererii (GET, POST, PUT, DELETE) si sa gestioneze raspunsurile in mod asincron.
+   */
+
+/** fetch() este o functie integrata in JavaScript, introdusa in ECMAScript 2015 (ES6), 
+ * care permite realizarea de cereri HTTP asincrone catre resurse precum servere web. 
+ * Aceasta functie simplifica si modernizează gestionarea cererilor si raspunsurilor HTTP in comparatie cu metodele mai vechi, cum ar fi XMLHttpRequest.
+ */
+
+/** GET- obtine informatii de la server;
+ * POST- trimite date la server pentru a fi procesate;
+ * PUT- actualizeaza date existente pe server;
+ * DELETE- sterge date de pe server;
+ */
+
+
+
 
 
 
